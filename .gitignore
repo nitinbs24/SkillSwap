@@ -6,11 +6,12 @@ server/node_modules/
 # Secrets / Environment variables
 .env
 .env.*
+!.env.example
 server/.env
 
 # Documentation
 CONTEXT.md
-*.md
+
 
 # Production Build
 client/dist/
