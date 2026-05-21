@@ -47,12 +47,18 @@ npm install
 ```
 
 **Environment Variables:**
-In the `server` directory, make sure you have a `.env` file containing your database and authentication configuration:
+In the `server` directory, duplicate the provided `.env.example` file and rename it to `.env`. 
+
+Then, open the new `.env` file and configure your database:
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_connection_string_here
-JWT_SECRET=your_jwt_secret_key_here
+MONGO_URI=mongodb://127.0.0.1:27017/skillswap  # Or use a MongoDB Atlas URI
+JWT_SECRET=your_super_secret_jwt_key
 ```
+
+*Note: For the database (`MONGO_URI`), your friends have two options:*
+1. **Local Database (Recommended for dev):** Install [MongoDB locally](https://www.mongodb.com/try/download/community) and use `mongodb://127.0.0.1:27017/skillswap`.
+2. **Cloud Database:** Create a free database on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and paste the connection string here.
 
 #### 2. Frontend Setup
 Open a new terminal or go back to the project root, then navigate to the `client` directory to install frontend dependencies:
